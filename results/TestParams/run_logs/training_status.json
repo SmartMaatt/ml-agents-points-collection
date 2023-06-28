@@ -1,0 +1,47 @@
+{
+    "MoveToGoal": {
+        "checkpoints": [
+            {
+                "steps": 1001,
+                "file_path": "results\\TestParams\\MoveToGoal\\MoveToGoal-1001.onnx",
+                "reward": 0.0,
+                "creation_time": 1687968852.7735043,
+                "auxillary_file_paths": [
+                    "results\\TestParams\\MoveToGoal\\MoveToGoal-1001.pt"
+                ]
+            },
+            {
+                "steps": 31868,
+                "file_path": "results\\TestParams\\MoveToGoal\\MoveToGoal-31868.onnx",
+                "reward": null,
+                "creation_time": 1687968985.3967497,
+                "auxillary_file_paths": [
+                    "results\\TestParams\\MoveToGoal\\MoveToGoal-31868.pt"
+                ]
+            },
+            {
+                "steps": 85540,
+                "file_path": "results\\TestParams\\MoveToGoal\\MoveToGoal-85540.onnx",
+                "reward": null,
+                "creation_time": 1687969143.2233024,
+                "auxillary_file_paths": [
+                    "results\\TestParams\\MoveToGoal\\MoveToGoal-85540.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 85540,
+            "file_path": "results\\TestParams\\MoveToGoal.onnx",
+            "reward": null,
+            "creation_time": 1687969143.2233024,
+            "auxillary_file_paths": [
+                "results\\TestParams\\MoveToGoal\\MoveToGoal-85540.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

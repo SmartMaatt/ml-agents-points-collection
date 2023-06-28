@@ -7,6 +7,10 @@ public class MoveToGoalTarget : Agent
 {
     [Header("References")]
     [SerializeField] private Transform _goalTransform;
+    [SerializeField] private MeshRenderer _platformMesh;
+
+    [SerializeField] private Material _winMaterial;
+    [SerializeField] private Material _loseMaterial;
 
     [Header("Settings")]
     [Range(0.0f, 5.0f)][SerializeField] private float _moveSpeed = 1.0f;
@@ -15,7 +19,7 @@ public class MoveToGoalTarget : Agent
     // Observations
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(transform.position);      // three observations (x, y, z)
+        sensor.AddObservation(transform.position);       // three observations (x, y, z)
         sensor.AddObservation(_goalTransform.position);  // three observations (x, y, z)
     }
 
@@ -34,6 +38,7 @@ public class MoveToGoalTarget : Agent
         // Collected goal
         if (other.TryGetComponent<Goal>(out Goal goal))
         {
+            _platformMesh.material = _winMaterial;
             SetReward(+1f);
             EndEpisode();
         }  
@@ -44,15 +49,23 @@ public class MoveToGoalTarget : Agent
         // Fell from platform
         if (other.TryGetComponent<Wall>(out Wall wall))
         {
+            _platformMesh.material = _loseMaterial;
             SetReward(-1f);
             EndEpisode();
         }
     }
 
+    private void Update()
+    {
+        AddReward(-0.001f);
+    }
+
+
     // Episode management
     public override void OnEpisodeBegin()
     {
-        transform.position = Vector3.zero;
+        transform.localPosition = Vector3.zero;
+        _goalTransform.localPosition = new Vector3(Random.Range(-4.2f, 4.2f), 0, Random.Range(-2.4f, 2.4f));
     }
 
     // Testing
