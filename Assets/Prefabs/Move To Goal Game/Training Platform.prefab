@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 4685260015364616498}
   - component: {fileID: 4685260015364616505}
   - component: {fileID: 4685260015364616504}
-  - component: {fileID: 4685260015364616507}
+  - component: {fileID: 1539479776732245328}
   - component: {fileID: 4685260015364616501}
   m_Layer: 0
   m_Name: Player
@@ -282,13 +282,13 @@ MonoBehaviour:
     hasUpgradedBrainParametersWithActionSpec: 1
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
-  m_BehaviorType: 0
+  m_BehaviorType: 1
   m_BehaviorName: MoveToGoal
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
   m_ObservableAttributeHandling: 0
---- !u!114 &4685260015364616507
+--- !u!114 &1539479776732245328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4685260015364616506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e83ad662ae49f44ae8d5b676457b39, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c3850a5a19e3cb4eb73a79bbe56bffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agentParameters:
@@ -308,7 +308,7 @@ MonoBehaviour:
   _platformMesh: {fileID: 4685260016456383644}
   _winMaterial: {fileID: 2100000, guid: 8d78bef26d3eb9142985ea430d205fb1, type: 2}
   _loseMaterial: {fileID: 2100000, guid: 79ad7db543015e644b78bbdbfd7c9cc3, type: 2}
-  _moveSpeed: 5
+  _moveSpeed: 3
 --- !u!114 &4685260015364616501
 MonoBehaviour:
   m_ObjectHideFlags: 0

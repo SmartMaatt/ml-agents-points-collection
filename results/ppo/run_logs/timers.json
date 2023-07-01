@@ -1,0 +1,49 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1688215887",
+        "python_version": "3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\mateu\\Documents\\GitHub\\ML-Agents-Space-Ship\\venv\\Scripts\\mlagents-learn --resume",
+        "mlagents_version": "0.28.0",
+        "mlagents_envs_version": "0.28.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.21.6",
+        "end_time_seconds": "1688215897"
+    },
+    "total": 10.0169978,
+    "count": 1,
+    "self": 0.004620400000000302,
+    "children": {
+        "run_training.setup": {
+            "total": 0.05258410000000002,
+            "count": 1,
+            "self": 0.05258410000000002
+        },
+        "TrainerController.start_learning": {
+            "total": 9.9597933,
+            "count": 1,
+            "self": 7.45000000001994e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 8.2315095,
+                    "count": 1,
+                    "self": 8.2315095
+                },
+                "TrainerController._save_models": {
+                    "total": 1.7282092999999996,
+                    "count": 1,
+                    "self": 0.0008125999999997191,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 1.7273967,
+                            "count": 1,
+                            "self": 1.7273967
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

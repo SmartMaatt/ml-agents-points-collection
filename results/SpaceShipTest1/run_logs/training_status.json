@@ -1,0 +1,65 @@
+{
+    "SpaceShipBehavior": {
+        "checkpoints": [
+            {
+                "steps": 15139,
+                "file_path": "results\\SpaceShipTest1\\SpaceShipBehavior\\SpaceShipBehavior-15139.onnx",
+                "reward": null,
+                "creation_time": 1688217715.212304,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipTest1\\SpaceShipBehavior\\SpaceShipBehavior-15139.pt"
+                ]
+            },
+            {
+                "steps": 375893,
+                "file_path": "results\\SpaceShipTest1\\SpaceShipBehavior\\SpaceShipBehavior-375893.onnx",
+                "reward": null,
+                "creation_time": 1688218644.5701594,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipTest1\\SpaceShipBehavior\\SpaceShipBehavior-375893.pt"
+                ]
+            },
+            {
+                "steps": 499989,
+                "file_path": "results\\SpaceShipTest1\\SpaceShipBehavior\\SpaceShipBehavior-499989.onnx",
+                "reward": -0.6919999718666077,
+                "creation_time": 1688233137.361235,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipTest1\\SpaceShipBehavior\\SpaceShipBehavior-499989.pt"
+                ]
+            },
+            {
+                "steps": 500053,
+                "file_path": "results\\SpaceShipTest1\\SpaceShipBehavior\\SpaceShipBehavior-500053.onnx",
+                "reward": -0.6919999718666077,
+                "creation_time": 1688233137.3887932,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipTest1\\SpaceShipBehavior\\SpaceShipBehavior-500053.pt"
+                ]
+            },
+            {
+                "steps": 845036,
+                "file_path": "results\\SpaceShipTest1\\SpaceShipBehavior\\SpaceShipBehavior-845036.onnx",
+                "reward": null,
+                "creation_time": 1688234020.5872428,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipTest1\\SpaceShipBehavior\\SpaceShipBehavior-845036.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 845036,
+            "file_path": "results\\SpaceShipTest1\\SpaceShipBehavior.onnx",
+            "reward": null,
+            "creation_time": 1688234020.5872428,
+            "auxillary_file_paths": [
+                "results\\SpaceShipTest1\\SpaceShipBehavior\\SpaceShipBehavior-845036.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

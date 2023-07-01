@@ -1,0 +1,47 @@
+{
+    "SpaceShipBehavior": {
+        "checkpoints": [
+            {
+                "steps": 499985,
+                "file_path": "results\\SpaceShipTest2\\SpaceShipBehavior\\SpaceShipBehavior-499985.onnx",
+                "reward": -1.2700000926852226,
+                "creation_time": 1688235382.810679,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipTest2\\SpaceShipBehavior\\SpaceShipBehavior-499985.pt"
+                ]
+            },
+            {
+                "steps": 999996,
+                "file_path": "results\\SpaceShipTest2\\SpaceShipBehavior\\SpaceShipBehavior-999996.onnx",
+                "reward": null,
+                "creation_time": 1688236671.8513114,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipTest2\\SpaceShipBehavior\\SpaceShipBehavior-999996.pt"
+                ]
+            },
+            {
+                "steps": 1449365,
+                "file_path": "results\\SpaceShipTest2\\SpaceShipBehavior\\SpaceShipBehavior-1449365.onnx",
+                "reward": null,
+                "creation_time": 1688237857.0580478,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipTest2\\SpaceShipBehavior\\SpaceShipBehavior-1449365.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1449365,
+            "file_path": "results\\SpaceShipTest2\\SpaceShipBehavior.onnx",
+            "reward": null,
+            "creation_time": 1688237857.0580478,
+            "auxillary_file_paths": [
+                "results\\SpaceShipTest2\\SpaceShipBehavior\\SpaceShipBehavior-1449365.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
