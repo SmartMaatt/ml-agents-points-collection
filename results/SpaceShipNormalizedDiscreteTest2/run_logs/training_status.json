@@ -1,0 +1,65 @@
+{
+    "SpaceShipBehavior": {
+        "checkpoints": [
+            {
+                "steps": 499939,
+                "file_path": "results\\SpaceShipNormalizedDiscreteTest2\\SpaceShipBehavior\\SpaceShipBehavior-499939.onnx",
+                "reward": -0.9959998726844788,
+                "creation_time": 1688295389.3589249,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipNormalizedDiscreteTest2\\SpaceShipBehavior\\SpaceShipBehavior-499939.pt"
+                ]
+            },
+            {
+                "steps": 999971,
+                "file_path": "results\\SpaceShipNormalizedDiscreteTest2\\SpaceShipBehavior\\SpaceShipBehavior-999971.onnx",
+                "reward": -1.523499958217144,
+                "creation_time": 1688296869.3315904,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipNormalizedDiscreteTest2\\SpaceShipBehavior\\SpaceShipBehavior-999971.pt"
+                ]
+            },
+            {
+                "steps": 1427496,
+                "file_path": "results\\SpaceShipNormalizedDiscreteTest2\\SpaceShipBehavior\\SpaceShipBehavior-1427496.onnx",
+                "reward": null,
+                "creation_time": 1688298265.9625165,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipNormalizedDiscreteTest2\\SpaceShipBehavior\\SpaceShipBehavior-1427496.pt"
+                ]
+            },
+            {
+                "steps": 1499998,
+                "file_path": "results\\SpaceShipNormalizedDiscreteTest2\\SpaceShipBehavior\\SpaceShipBehavior-1499998.onnx",
+                "reward": 0.9342500865459442,
+                "creation_time": 1688298592.0671086,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipNormalizedDiscreteTest2\\SpaceShipBehavior\\SpaceShipBehavior-1499998.pt"
+                ]
+            },
+            {
+                "steps": 1928705,
+                "file_path": "results\\SpaceShipNormalizedDiscreteTest2\\SpaceShipBehavior\\SpaceShipBehavior-1928705.onnx",
+                "reward": null,
+                "creation_time": 1688299911.8661513,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipNormalizedDiscreteTest2\\SpaceShipBehavior\\SpaceShipBehavior-1928705.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1928705,
+            "file_path": "results\\SpaceShipNormalizedDiscreteTest2\\SpaceShipBehavior.onnx",
+            "reward": null,
+            "creation_time": 1688299911.8661513,
+            "auxillary_file_paths": [
+                "results\\SpaceShipNormalizedDiscreteTest2\\SpaceShipBehavior\\SpaceShipBehavior-1928705.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

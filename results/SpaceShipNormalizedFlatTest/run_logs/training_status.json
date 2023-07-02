@@ -1,0 +1,29 @@
+{
+    "SpaceShipBehavior": {
+        "checkpoints": [
+            {
+                "steps": 365508,
+                "file_path": "results\\SpaceShipNormalizedFlatTest\\SpaceShipBehavior\\SpaceShipBehavior-365508.onnx",
+                "reward": null,
+                "creation_time": 1688286818.8262646,
+                "auxillary_file_paths": [
+                    "results\\SpaceShipNormalizedFlatTest\\SpaceShipBehavior\\SpaceShipBehavior-365508.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 365508,
+            "file_path": "results\\SpaceShipNormalizedFlatTest\\SpaceShipBehavior.onnx",
+            "reward": null,
+            "creation_time": 1688286818.8262646,
+            "auxillary_file_paths": [
+                "results\\SpaceShipNormalizedFlatTest\\SpaceShipBehavior\\SpaceShipBehavior-365508.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

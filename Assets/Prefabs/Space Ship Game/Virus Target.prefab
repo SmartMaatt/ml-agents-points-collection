@@ -156,6 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807f5e10191202f4fa24f3be1b26b77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _defaultHeight: 8
-  _xAxisRange: {x: -7, y: 7}
-  _moveSpeedRange: {x: 1, y: 1}
+  _defaultHeight: 0.5
+  _xAxisRange: {x: -3.5, y: 3.5}
+  _zAxisRange: {x: -3.5, y: 3.5}
