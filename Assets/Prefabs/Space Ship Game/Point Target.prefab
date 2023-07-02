@@ -157,5 +157,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _defaultHeight: 8
-  _yAxisRange: {x: -7, y: 7}
+  _xAxisRange: {x: -7, y: 7}
   _moveSpeedRange: {x: 1, y: 1}

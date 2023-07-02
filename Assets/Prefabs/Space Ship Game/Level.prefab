@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 481742870254520430}
   - component: {fileID: 481742870254520428}
-  - component: {fileID: 481742870254520431}
   m_Layer: 0
   m_Name: Walls
   m_TagString: Untagged
@@ -40,23 +39,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481742870254520425}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &481742870254520431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481742870254520425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbb66f6a08b3ae04cb83d2ef2b84efbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &481742870357993169
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 3
+  _xAxisLimit: {x: -7, y: 7}
 --- !u!114 &481742870357993173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,8 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 15
-    NumStackedVectorObservations: 1
+    VectorObservationSize: 10
+    NumStackedVectorObservations: 15
     m_ActionSpec:
       m_NumContinuousActions: 1
       BranchSizes: 
@@ -208,9 +196,7 @@ MonoBehaviour:
   _losePoints: -1
   _collectValidTargetPoints: 0.2
   _collectInvalidTargetPoints: -0.2
-  _loseValidTargetPoints: -0.05
-  _loseInvalidTargetPoints: 0.05
-  _timePoints: -0.001
+  _playerXAxisLimits: {x: -7, y: 7}
 --- !u!114 &481742870357993177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,6 +1189,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afe8d15a5b9999345b0232025b114e49, type: 3}
+--- !u!4 &3142157139822082224 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3257318399592588077, guid: afe8d15a5b9999345b0232025b114e49, type: 3}
+  m_PrefabInstance: {fileID: 481742871142210461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3749707251616404048 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3649846948129622477, guid: afe8d15a5b9999345b0232025b114e49, type: 3}
@@ -1214,11 +1205,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 807f5e10191202f4fa24f3be1b26b77f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &3142157139822082224 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3257318399592588077, guid: afe8d15a5b9999345b0232025b114e49, type: 3}
-  m_PrefabInstance: {fileID: 481742871142210461}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &481742871467623873
 PrefabInstance:
   m_ObjectHideFlags: 0

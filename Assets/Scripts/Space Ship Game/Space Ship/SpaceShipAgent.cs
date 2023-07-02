@@ -27,12 +27,8 @@ public class SpaceShipAgent : Agent
     [SerializeField] private float _collectValidTargetPoints = 0.2f;
     [SerializeField] private float _collectInvalidTargetPoints = -0.2f;
 
-    [Space]
-    [SerializeField] private float _loseValidTargetPoints = -0.05f;
-    [SerializeField] private float _loseInvalidTargetPoints = +0.05f;
-
-    [Space]
-    [SerializeField] private float _timePoints = -0.001f;
+    [Header("Settings")]
+    [SerializeField] private Vector2 _playerXAxisLimits = new Vector2(-7, 7);
 
 
     // Setup methods
@@ -42,23 +38,10 @@ public class SpaceShipAgent : Agent
         _shipState = GetComponent<SpaceShipState>();
     }
 
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-        foreach (Target target in _validTargets)
-        {
-            target.FellOnGround += LostValidTarget;
-        }
-
-        foreach (Target target in _invalidTargets)
-        {
-            target.FellOnGround += LostInvalidTarget;
-        }
-    }
-
     public override void OnEpisodeBegin()
     {
         _shipControl.SetPositionToDefault();
+        _shipState.ResetPoints();
 
         foreach (Target target in _validTargets)
         {
@@ -68,20 +51,6 @@ public class SpaceShipAgent : Agent
         foreach (Target target in _invalidTargets)
         {
             target.ResetTarget();
-        }
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-        foreach (Target target in _validTargets)
-        {
-            target.FellOnGround -= LostValidTarget;
-        }
-
-        foreach (Target target in _invalidTargets)
-        {
-            target.FellOnGround -= LostInvalidTarget;
         }
     }
 
@@ -89,22 +58,41 @@ public class SpaceShipAgent : Agent
     // Observations
     public override void CollectObservations(VectorSensor sensor)
     {
-        sensor.AddObservation(transform.position);       // three observations (x, y, z)
+        // Space ship position [1]
+        sensor.AddObservation(Normalization.NormalizeFloat(
+                transform.localPosition.x,
+                _playerXAxisLimits.x,
+                _playerXAxisLimits.y
+            ));
 
-        // 2 x Valid target + 2 x Invalid target = 12 observations
+        //Debug.Log(Normalization.NormalizeFloat(
+        //        transform.localPosition.x,
+        //        _playerXAxisLimits.x,
+        //        _playerXAxisLimits.y
+        //    ));
+
+        // Current score [1]
+        sensor.AddObservation(Normalization.NormalizeFloat(
+                (float)_shipState.CollectedPoints,
+                0.0f,
+                (float)_shipState.MaxPoints
+            ));
+
+        // 2 x Valid target [2] + 2 x Invalid target [2] 
+        // [8] Observations
         try
         {
-            sensor.AddObservation(_validTargets[0].transform.position);
-            sensor.AddObservation(_validTargets[1].transform.position);
+            sensor.AddObservation(_validTargets[0].NormalizedPosition);
+            //Debug.Log(_validTargets[0].NormalizedPosition.x);
+            sensor.AddObservation(_validTargets[1].NormalizedPosition);
 
-            sensor.AddObservation(_invalidTargets[0].transform.position);
-            sensor.AddObservation(_invalidTargets[1].transform.position);
+            sensor.AddObservation(_invalidTargets[0].NormalizedPosition);
+            sensor.AddObservation(_invalidTargets[1].NormalizedPosition);
         }
         catch (IndexOutOfRangeException ex)
         {
             Debug.LogError(ex.Message);
         }
-
     }
 
 
@@ -135,31 +123,8 @@ public class SpaceShipAgent : Agent
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        // Fell from platform
-        if (other.TryGetComponent<Wall>(out Wall wall))
-        {
-            SetReward(_losePoints);
-            FinishEpisode(false);
-        }
-    }
-
-    public void LostValidTarget()
-    {
-        SetReward(_loseValidTargetPoints);
-    }
-
-    public void LostInvalidTarget()
-    {
-        SetReward(_loseInvalidTargetPoints);
-    }
-
     private void Update()
     {
-        // Time penalty on every tick
-        AddReward(_timePoints);
-
         // Won episode
         if (_shipState.IsPointsMax())
         {
@@ -182,7 +147,7 @@ public class SpaceShipAgent : Agent
             AddReward(_losePoints);
         }
 
-        Debug.Log($"Episode ended: {wonEpisode}");
+        //Debug.Log(GetCumulativeReward());
         EndEpisode();
     }
 
