@@ -40,7 +40,7 @@ The game can be played in two modes:
 
 ## Installation
 1. Install Unity version 2020.48 from the official Unity website.
-2. Clone the ML-Agents-Space-Ship repository to your local machine.
+2. Clone the `ml-agents-points-collection` repository to your local machine.
 3. Set up a Python virtual environment:
 ```
 python -m venv [env_name]
