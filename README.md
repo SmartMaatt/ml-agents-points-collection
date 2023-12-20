@@ -39,7 +39,7 @@ The game can be played in two modes:
 - After installing the appropriate Unity version, a Python virtual environment must be created using the provided `requirements.txt` file.
 
 ## Installation
-1. Install Unity version 2020.48 from the official Unity website.
+1. Install Unity version 2020.3.48f1 from the official Unity website.
 2. Clone the `ml-agents-points-collection` repository to your local machine.
 3. Set up a Python virtual environment:
 ```
