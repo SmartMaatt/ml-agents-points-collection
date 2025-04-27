@@ -55,7 +55,7 @@ pip install -r requirements.txt
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-&copy; 2023 Mateusz Płonka (SmartMatt). All rights reserved.
+&copy; 2025 Mateusz Płonka (SmartMatt). All rights reserved.
 <a href="https://smartmatt.pl/">
     <img src="https://smartmatt.pl/github/smartmatt-logo.png" title="SmartMatt Logo" align="right" width="60" />
 </a>
