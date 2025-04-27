@@ -35,13 +35,13 @@ The game can be played in two modes:
 *Learning process for nine agents simultaneously.*
 
 ## Requirements
-- Unity Version: Unity 2020.3.48f1
-- After installing the appropriate Unity version, a Python virtual environment must be created using the provided `requirements.txt` file.
+- Unity Version: Unity 6.1
+- After installing the appropriate Unity version, a Python 3.10.11 virtual environment must be created using the provided `requirements.txt` file.
 
 ## Installation
-1. Install Unity version 2020.3.48f1 from the official Unity website.
+1. Install Unity version 6.1 from the official Unity website.
 2. Clone the `ml-agents-points-collection` repository to your local machine.
-3. Set up a Python virtual environment:
+3. Set up a Python 3.10.11 virtual environment:
 ```
 python -m venv [env_name]
 source [env_name]/bin/activate # On Unix or MacOS
